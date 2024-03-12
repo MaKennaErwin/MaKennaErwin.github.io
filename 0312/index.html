@@ -6,23 +6,137 @@
     <link rel="icon" href="head2.png" />
 
     <style>
-        #div1 {
+        #div1 
+        {
             width: 200px;
             height: 150px;
             background-color: lightblue;
         }
 
-        #img1 {
+        #img1 
+        {
             height: 150px;
         }
 
-        #img2 {
+        #img2 
+        {
             height: 200px;
         }
     </style>
 </head>
 
 <body>
+
+    <script>
+        //JavaScript, script language, it is easy
+        //Adobe => Adobe Flash => ActionScript
+        //Two: BScript JavaScript => desiged to run in web browser
+        //JavaScript initially called LiveScript => Java (company owned both LiveScript and Java, changed the name from LiveScript => JavaScript)
+        //JavaScript and Java are different, JavaScript not derived from Java
+
+        //JavaScript is not type safe () low efficiency, more rules to make it behave more like C# and Java
+        //C# and Java is type safe
+
+        //JavaScript (webpage)
+
+        "use strict"; //We ask JavaScript to behave like C# or Java
+
+        const a1 = 20; //local variable, int
+        let a2; //key word to define a local variable
+        //a2 is undefined, does not have a datatype at this moment
+        let a3; //undefined local
+        a2 = 19; //assignment, now it's a number (int)
+        var a4; //global, undefined
+        a4 = 128.8 //number (double)
+
+        //alert(a4);
+        //alert(a3);
+        {//wall, boundary of a world, scope, block 
+            let b1; //defined a local variable
+            b1 = "Tom"; //string
+            console.log(b1);
+
+            var b2; //global
+            b2 = 100;
+            console.log(b2);
+        }
+
+    </script>
+
+    <script>
+        "use strict";
+        //alert(a4);
+        console.log(a4);
+        //console.log(b1);
+        console.log(b2);
+
+        //string 
+        let s1; //works the same way as var in this case because it's not surrounded by {}, meaning let behaves like a global variable
+        s1 = 100; //valid
+        s1 = "Tom"; //string
+        s1 = 'Tom'; //double or single quotes both work to define a string
+
+        let age1;
+        age1 = 20;
+        let name1;
+        name1 = 'Tom'; 
+
+        let s2;
+        s2 = `The name is ${name1} the Age is ${age1}`;
+        console.log(s2);
+        //html css (not programming, no if else or loops)
+        //JavaScript
+        //let (we use 90% of the time), var
+        //`${}` know how to use ticks (``) and ${} syntax
+
+        //know how to define an object
+        let stu1 = {
+            age: 19,
+            name: "tom",
+            grade: 96.6,
+            weight: 128.8
+        }; //object, dictionary
+
+        console.log(stu1.weight);
+
+        //array, list, map()
+        let arr1;
+        arr1 = [20, 19, 22];
+        console.log(arr1.length);
+        console.log(arr1[1]);
+
+        //how to define functions
+        //way 1 (no let before p1 or p2)
+        function func1(p1, p2)
+        {
+            return p1 + p2;
+        }
+
+        let r1 = func1(2.3, 3.6)
+        console.log(r1);
+
+        let fc1; //undefined
+        fc1 = func1;
+        r1 = fc1(2, 3);
+        console.log(r1);
+
+        //way 2 arrow function
+        let fc2;
+        //in JavaScript, semicolon is not required (but is highly recommended)
+        fc2 = (p1, p2) => { return p1 * p2 };
+
+        r1 = fc2(2, 3);
+        console.log(r1);
+
+        arr1 = [20, 19, 22];
+        // map() will result in a new array
+        let arr2;
+        arr2 = arr1.map((x) => { return x * 2 });
+        console.log(arr2); //will return [20 * 2, 19 * 2, 22 * 2]
+        console.log(arr1);
+
+    </script>
+
     <div id="div1"></div>
     <img id="img1" src="head2.png"/>
     <img id="img2" src="b.svg" />
